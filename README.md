@@ -1,2 +1,2 @@
-For Stratified care model of simple LBP
-[開始](Revised.html)
+請選取合適的問卷：
+<a href="Revised.html"><button>STarT 背部檢測工具</button></a>
