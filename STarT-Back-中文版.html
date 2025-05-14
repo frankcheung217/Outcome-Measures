@@ -1,4 +1,4 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -136,28 +136,28 @@
                 </div>
             </div>
             <div class="question">
-                <label>4. 我覺得現在不適合進行體力活動，例如運動或工作。(I feel it's not safe to be physically active, like exercising or working.)</label>
+                <label>4. 我覺得現在不適合進行體力活動，例如運動或工作。(I feel it’s not safe to be physically active, like exercising or working.)</label>
                 <div class="radio-group">
                     <input type="radio" name="q4" value="0" required><label>不同意</label>
                     <input type="radio" name="q4" value="1"><label>同意</label>
                 </div>
             </div>
             <div class="question">
-                <label>5. 我擔心我的背痛會變得更嚴重。(I'm worried that my back pain will get worse.)</label>
+                <label>5. 我擔心我的背痛會變得更嚴重。(I’m worried that my back pain will get worse.)</label>
                 <div class="radio-group">
                     <input type="radio" name="q5" value="0" required><label>不同意</label>
                     <input type="radio" name="q5" value="1"><label>同意</label>
                 </div>
             </div>
             <div class="question">
-                <label>6. 總體來說，我最近感覺不太好。(Overall, I haven't been feeling very well lately.)</label>
+                <label>6. 總體來說，我最近感覺不太好。(Overall, I haven’t been feeling very well lately.)</label>
                 <div class="radio-group">
                     <input type="radio" name="q6" value="0" required><label>不同意</label>
                     <input type="radio" name="q6" value="1"><label>同意</label>
                 </div>
             </div>
             <div class="question">
-                <label>7. 我完全沒有享受我通常喜歡的事情。(I don't enjoy the things I usually like to do at all.)</label>
+                <label>7. 我完全沒有享受我通常喜歡的事情。(I don’t enjoy the things I usually like to do at all.)</label>
                 <div class="radio-group">
                     <input type="radio" name="q7" value="0" required><label>不同意</label>
                     <input type="radio" name="q7" value="1"><label>同意</label>
@@ -171,7 +171,7 @@
                 </div>
             </div>
             <div class="question">
-                <label>9. 我覺得無論做什麼，背痛都不會好轉。(I feel that no matter what I do, my back pain won't get better.)</label>
+                <label>9. 我覺得無論做什麼，背痛都不會好轉。(I feel that no matter what I do, my back pain won’t get better.)</label>
                 <div class="radio-group">
                     <input type="radio" name="q9" value="0" required><label>不同意</label>
                     <input type="radio" name="q9" value="1"><label>同意</label>
@@ -187,52 +187,41 @@
 
     <script>
         function calculateScore() {
+            alert('計算開始');
             const form = document.getElementById('startBackForm');
-            const resultDiv = document.getElementBy симптомы
-            // Check if all questions are answered
+            const resultDiv = document.getElementById('result');
             const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9'];
             for (let q of questions) {
                 if (!form.querySelector(`input[name="${q}"]:checked`)) {
-                    alert('請回答所有問題！');
+                    alert('請回答所有問題！ 缺少: ' + q);
                     return;
                 }
             }
-
-            // Calculate total score
             let totalScore = 0;
             questions.forEach(q => {
                 const value = parseInt(form.querySelector(`input[name="${q}"]:checked`).value);
                 totalScore += value;
             });
-
-            // Calculate psychosocial subscale score (questions 5-9)
             let psychoScore = 0;
             ['q5', 'q6', 'q7', 'q8', 'q9'].forEach(q => {
                 const value = parseInt(form.querySelector(`input[name="${q}"]:checked`).value);
                 psychoScore += value;
             });
-
-            // Determine risk category
-            let riskCategory;
-            if (totalScore <= 3) {
-                riskCategory = '低風險';
-            } else if (totalScore >= 4 && psychoScore < 4) {
-                riskCategory = '中風險';
-            } else {
-                riskCategory = '高風險';
-            }
-
-            // Display result
-            resultDiv.style.display = 'block';
-            resultDiv.innerHTML = `
-                <p><strong>總分：</strong> ${totalScore} (滿分9分)</p>
-                <p><strong>心理社會分量表得分：</strong> ${psychoScore} (滿分5分)</p>
-                <p><strong>風險類別：</strong> ${riskCategory}</p>
-                <p class="explanation"><em>說明：低風險表示持續性殞疾的可能性較低；中風險表示需要進一步評估；高風險表示可能需要心理社會干預。</em></p>
-            `;
+            let riskCategory = totalScore <= 3 ? '低風險' : (totalScore >= 4 && psychoScore < 4) ? '中風險' : '高風險';
+            setTimeout(() => {
+                resultDiv.style.display = 'block';
+                resultDiv.innerHTML = `
+                    <p><strong>總分：</strong> ${totalScore} (滿分9分)</p>
+                    <p><strong>心理社會分量表得分：</strong> ${psychoScore} (滿分5分)</p>
+                    <p><strong>風險類別：</strong> ${riskCategory}</p>
+                    <p class="explanation"><em>說明：低風險表示持續性殞疾的可能性較低；中風險表示需要進一步評估；高風險表示可能需要心理社會干預。</em></p>
+                `;
+                alert('結果：總分=' + totalScore + ', 心理社會=' + psychoScore + ', 風險=' + riskCategory);
+            }, 0);
         }
 
         function clearForm() {
+            alert('清除表單');
             const form = document.getElementById('startBackForm');
             const resultDiv = document.getElementById('result');
             form.reset();
