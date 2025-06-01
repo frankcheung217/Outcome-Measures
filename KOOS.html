@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOOS 膝關節評分問卷（KOOS) </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .question-block {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .question-block h5 {
+            color: #1a3c6d;
+            margin-bottom: 10px;
+        }
+        .btn-option {
+            margin: 5px;
+            min-width: 80px;
+        }
+        .results {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">膝關節損傷與骨關節炎問卷（KOOS）</h1>
+        <p class="text-center mb-4">請根據您過去一週的膝關節狀況選擇最適合的答案。</p>
+        
+        <form id="koosForm">
+            <!-- Pain Subscale -->
+            <div class="question-block">
+                <h4>疼痛</h4>
+                <div id="pain">
+                    <div class="question-block">
+                        <h5>P1. 過去一週扭轉或旋轉膝關節時感到多少疼痛？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="P1" id="P1-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P1-0">無</label>
+                            <input type="radio" class="btn-check" name="P1" id="P1-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P1-1">輕微</label>
+                            <input type="radio" class="btn-check" name="P1" id="P1-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P1-2">中度</label>
+                            <input type="radio" class="btn-check" name="P1" id="P1-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P1-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="P1" id="P1-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P1-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>P2. 過去一週伸直膝關節時感到多少疼痛？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="P2" id="P2-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P2-0">無</label>
+                            <input type="radio" class="btn-check" name="P2" id="P2-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P2-1">輕微</label>
+                            <input type="radio" class="btn-check" name="P2" id="P2-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P2-2">中度</label>
+                            <input type="radio" class="btn-check" name="P2" id="P2-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P2-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="P2" id="P2-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P2-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>P3. 過去一週彎曲膝關節時感到多少疼痛？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="P3" id="P3-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P3-0">無</label>
+                            <input type="radio" class="btn-check" name="P3" id="P3-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P3-1">輕微</label>
+                            <input type="radio" class="btn-check" name="P3" id="P3-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P3-2">中度</label>
+                            <input type="radio" class="btn-check" name="P3" id="P3-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P3-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="P3" id="P3-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P3-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>P4. 過去一週走平路時感到多少疼痛？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="P4" id="P4-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P4-0">無</label>
+                            <input type="radio" class="btn-check" name="P4" id="P4-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P4-1">輕微</label>
+                            <input type="radio" class="btn-check" name="P4" id="P4-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P4-2">中度</label>
+                            <input type="radio" class="btn-check" name="P4" id="P4-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P4-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="P4" id="P4-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P4-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>P5. 過去一週夜間睡在床上時感到多少疼痛？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="P5" id="P5-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P5-0">無</label>
+                            <input type="radio" class="btn-check" name="P5" id="P5-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P5-1">輕微</label>
+                            <input type="radio" class="btn-check" name="P5" id="P5-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P5-2">中度</label>
+                            <input type="radio" class="btn-check" name="P5" id="P5-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P5-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="P5" id="P5-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P5-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>P6. 過去一週坐下或躺下時感到多少疼痛？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="P6" id="P6-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P6-0">無</label>
+                            <input type="radio" class="btn-check" name="P6" id="P6-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P6-1">輕微</label>
+                            <input type="radio" class="btn-check" name="P6" id="P6-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P6-2">中度</label>
+                            <input type="radio" class="btn-check" name="P6" id="P6-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P6-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="P6" id="P6-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P6-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>P7. 過去一週站立時感到多少疼痛？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="P7" id="P7-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P7-0">無</label>
+                            <input type="radio" class="btn-check" name="P7" id="P7-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P7-1">輕微</label>
+                            <input type="radio" class="btn-check" name="P7" id="P7-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P7-2">中度</label>
+                            <input type="radio" class="btn-check" name="P7" id="P7-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P7-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="P7" id="P7-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P7-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>P8. 過去一週上落樓梯時感到多少疼痛？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="P8" id="P8-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P8-0">無</label>
+                            <input type="radio" class="btn-check" name="P8" id="P8-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P8-1">輕微</label>
+                            <input type="radio" class="btn-check" name="P8" id="P8-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P8-2">中度</label>
+                            <input type="radio" class="btn-check" name="P8" id="P8-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P8-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="P8" id="P8-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P8-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>P9. 過去一週落斜坡時感到多少疼痛？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="P9" id="P9-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P9-0">無</label>
+                            <input type="radio" class="btn-check" name="P9" id="P9-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P9-1">輕微</label>
+                            <input type="radio" class="btn-check" name="P9" id="P9-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P9-2">中度</label>
+                            <input type="radio" class="btn-check" name="P9" id="P9-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P9-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="P9" id="P9-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="P9-4">極度</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Symptoms Subscale -->
+            <div class="question-block">
+                <h4>症狀</h4>
+                <div id="symptoms">
+                    <div class="question-block">
+                        <h5>S1. 您的膝關節是否有磨擦、喀嗒聲或其他噪音？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="S1" id="S1-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S1-0">從不</label>
+                            <input type="radio" class="btn-check" name="S1" id="S1-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S1-1">很少</label>
+                            <input type="radio" class="btn-check" name="S1" id="S1-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S1-2">有時</label>
+                            <input type="radio" class="btn-check" name="S1" id="S1-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S1-3">經常</label>
+                            <input type="radio" class="btn-check" name="S1" id="S1-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S1-4">總是</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>S2. 過去一週您的膝關節是否有腫脹？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="S2" id="S2-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S2-0">從不</label>
+                            <input type="radio" class="btn-check" name="S2" id="S2-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S2-1">很少</label>
+                            <input type="radio" class="btn-check" name="S2" id="S2-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S2-2">有時</label>
+                            <input type="radio" class="btn-check" name="S2" id="S2-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S2-3">經常</label>
+                            <input type="radio" class="btn-check" name="S2" id="S2-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S2-4">總是</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>S3. 您的膝關節是否有卡住或鎖定的感覺？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="S3" id="S3-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S3-0">從不</label>
+                            <input type="radio" class="btn-check" name="S3" id="S3-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S3-1">很少</label>
+                            <input type="radio" class="btn-check" name="S3" id="S3-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S3-2">有時</label>
+                            <input type="radio" class="btn-check" name="S3" id="S3-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S3-3">經常</label>
+                            <input type="radio" class="btn-check" name="S3" id="S3-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S3-4">總是</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>S4. 您的膝關節早晨醒來時的僵硬程度？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="S4" id="S4-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S4-0">無</label>
+                            <input type="radio" class="btn-check" name="S4" id="S4-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S4-1">輕微</label>
+                            <input type="radio" class="btn-check" name="S4" id="S4-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S4-2">中度</label>
+                            <input type="radio" class="btn-check" name="S4" id="S4-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S4-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="S4" id="S4-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S4-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>S5. 過去一週活動後膝關節的僵硬程度？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="S5" id="S5-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S5-0">無</label>
+                            <input type="radio" class="btn-check" name="S5" id="S5-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S5-1">輕微</label>
+                            <input type="radio" class="btn-check" name="S5" id="S5-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S5-2">中度</label>
+                            <input type="radio" class="btn-check" name="S5" id="S5-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S5-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="S5" id="S5-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S5-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>S6. 您的膝關節能完全伸直的程度？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="S6" id="S6-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S6-0">無困難</label>
+                            <input type="radio" class="btn-check" name="S6" id="S6-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S6-1">輕微</label>
+                            <input type="radio" class="btn-check" name="S6" id="S6-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S6-2">中度</label>
+                            <input type="radio" class="btn-check" name="S6" id="S6-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S6-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="S6" id="S6-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S6-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>S7. 您的膝關節能完全彎曲的程度？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="S7" id="S7-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S7-0">無困難</label>
+                            <input type="radio" class="btn-check" name="S7" id="S7-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S7-1">輕微</label>
+                            <input type="radio" class="btn-check" name="S7" id="S7-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S7-2">中度</label>
+                            <input type="radio" class="btn-check" name="S7" id="S7-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S7-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="S7" id="S7-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="S7-4">極度</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QOL Subscale -->
+            <div class="question-block">
+                <h4>生活質數</h4>
+                <div id="qol">
+                    <div class="question-block">
+                        <h5>Q1. 您多常意識到您的膝關節問題？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="Q1" id="Q1-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q1-0">從不</label>
+                            <input type="radio" class="btn-check" name="Q1" id="Q1-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q1-1">每月</label>
+                            <input type="radio" class="btn-check" name="Q1" id="Q1-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q1-2">每週</label>
+                            <input type="radio" class="btn-check" name="Q1" id="Q1-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q1-3">每天</label>
+                            <input type="radio" class="btn-check" name="Q1" id="Q1-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q1-4">持續</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>Q2. 您是否因膝關節問題改變生活方式以避免損害膝關節的活動？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="Q2" id="Q2-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q2-0">完全沒有</label>
+                            <input type="radio" class="btn-check" name="Q2" id="Q2-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q2-1">輕微</label>
+                            <input type="radio" class="btn-check" name="Q2" id="Q2-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q2-2">中度</label>
+                            <input type="radio" class="btn-check" name="Q2" id="Q2-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q2-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="Q2" id="Q2-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q2-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>Q3. 您的膝關節問題導致多大的活動困難？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="Q3" id="Q3-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q3-0">無</label>
+                            <input type="radio" class="btn-check" name="Q3" id="Q3-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q3-1">輕微</label>
+                            <input type="radio" class="btn-check" name="Q3" id="Q3-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q3-2">中度</label>
+                            <input type="radio" class="btn-check" name="Q3" id="Q3-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q3-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="Q3" id="Q3-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q3-4">極度</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h5>Q4. 您對膝關節問題感到多大的挫折感？</h5>
+                        <div class="btn-group" role="group">
+                            <input type="radio" class="btn-check" name="Q4" id="Q4-0" value="0" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q4-0">無</label>
+                            <input type="radio" class="btn-check" name="Q4" id="Q4-1" value="1" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q4-1">輕微</label>
+                            <input type="radio" class="btn-check" name="Q4" id="Q4-2" value="2" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q4-2">中度</label>
+                            <input type="radio" class="btn-check" name="Q4" id="Q4-3" value="3" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q4-3">嚴重</label>
+                            <input type="radio" class="btn-check" name="Q4" id="Q4-4" value="4" autocomplete="off">
+                            <label class="btn btn-outline-primary btn-option" for="Q4-4">極度</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="text-center my-4">
+                <button type="button" class="btn btn-success btn-lg mx-2" onclick="computeScores()">計算分數</button>
+                <button type="button" class="btn btn-danger btn-lg mx-2" onclick="resetForm()">清除</button>
+            </div>
+        </form>
+
+        <!-- Results -->
+        <div class="results" id="results" style="display: none;">
+            <h4>您的KOOS分數</h4>
+            <p><strong>疼痛分數：</strong> <span id="painScore">-</span>（0-100，100為無疼痛）</p>
+            <p><strong>症狀分數：</strong> <span id="symptomsScore">-</span>（0-100，100為無症狀）</p>
+            <p><strong>生活質素分數：</strong> <span id="qolScore">-</span>（0-100，100為最佳）</p>
+            <p><strong>總分：</strong> <span id="totalScore">-</span>（0-100，三個細分的平均分數）</p>
+        </div>
+    </div>
+
+    <script>
+        function computeScores() {
+            // Pain Score
+            let painSum = 0, painCount = 0;
+            for (let i = 1; i <= 9; i++) {
+                const selected = document.querySelector(`input[name="P${i}"]:checked`);
+                if (selected) {
+                    painSum += parseInt(selected.value);
+                    painCount++;
+                }
+            }
+            const painScore = painCount === 9 ? 
+                Math.round(100 - (painSum / 36) * 100) : "未完成";
+
+            // Symptoms Score
+            let symptomsSum = 0, symptomsCount = 0;
+            for (let i = 1; i <= 7; i++) {
+                const selected = document.querySelector(`input[name="S${i}"]:checked`);
+                if (selected) {
+                    symptomsSum += parseInt(selected.value);
+                    symptomsCount++;
+                }
+            }
+            const symptomsScore = symptomsCount === 7 ? 
+                Math.round(100 - (symptomsSum / 28) * 100) : "未完成";
+
+            // QOL Score
+            let qolSum = 0, qolCount = 0;
+            for (let i = 1; i <= 4; i++) {
+                const selected = document.querySelector(`input[name="Q${i}"]:checked`);
+                if (selected) {
+                    qolSum += parseInt(selected.value);
+                    qolCount++;
+                }
+            }
+            const qolScore = qolCount === 4 ? 
+                Math.round(100 - (qolSum / 16) * 100) : "未完成";
+
+            // Total Score (average of subscale scores)
+            let totalScore = "未完成";
+            if (painCount === 9 && symptomsCount === 7 && qolCount === 4) {
+                totalScore = Math.round((painScore + symptomsScore + qolScore) / 3);
+            }
+
+            // Display results
+            document.getElementById('painScore').textContent = painScore;
+            document.getElementById('symptomsScore').textContent = symptomsScore;
+            document.getElementById('qolScore').textContent = qolScore;
+            document.getElementById('totalScore').textContent = totalScore;
+            document.getElementById('results').style.display = 'block';
+        }
+
+        function resetForm() {
+            document.getElementById('koosForm').reset();
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('painScore').textContent = '-';
+            document.getElementById('symptomsScore').textContent = '-';
+            document.getElementById('qolScore').textContent = '-';
+            document.getElementById('totalScore').textContent = '-';
+        }
+    </script>
+</body>
+</html>
