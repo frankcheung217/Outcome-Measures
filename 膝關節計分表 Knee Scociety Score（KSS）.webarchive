@@ -1,0 +1,217 @@
+bplist00�_WebMainResource�	
+_WebResourceTextEncodingName_WebResourceData_WebResourceMIMEType_WebResourceFrameName^WebResourceURLUUTF-8O!�<!DOCTYPE html><html lang="zh-Hant"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>膝關節計分表 Knee Scociety Score（KSS）</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            flex: 1;
+            padding: 10px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #calculateBtn {
+            background-color: #007BFF;
+        }
+        #calculateBtn:hover {
+            background-color: #0056b3;
+        }
+        #clearBtn {
+            background-color: #dc3545;
+        }
+        #clearBtn:hover {
+            background-color: #b02a37;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>膝關節計分表 Knee Society Score（KSS）</h1>
+    <form id="kssForm">
+        <!-- 1. 疼痛程度 -->
+        <div class="section">
+            <label>1. 疼痛程度（50分滿分）</label>
+            <input type="radio" name="pain" value="50" required=""> 沒有疼痛（50分）<br>
+            <label> - 輕微疼痛：</label>
+            <input type="radio" name="pain" value="45"> 間中疼痛（-45分）<br>
+            <input type="radio" name="pain" value="40"> 行樓梯（40分）<br>
+            <input type="radio" name="pain" value="30"> 行平路及樓梯（30分）<br>
+            <label> - 中等疼痛：</label>
+            <input type="radio" name="pain" value="20"> 間中疼痛（20分）<br>
+            <input type="radio" name="pain" value="10"> 持續疼痛（10分）<br>
+            <input type="radio" name="pain" value="0"> 嚴重疼痛（0分）<br>
+        </div>
+
+        <!-- 2. Flexion PROM -->
+        <div class="section">
+            <label>2. Flexion PROM（每5度=1分）</label>
+            <input type="number" id="flexionPROM" min="0" max="500" placeholder="輸入度數" required="">
+        </div>
+
+        <!-- 3. Anteroposterior Stability -->
+        <div class="section">
+            <label>3. Anteroposterior Stability（10分滿分）</label>
+            <input type="radio" name="apStability" value="10" required=""> &lt;5mm（10分）<br>
+            <input type="radio" name="apStability" value="5"> 5-10mm（5分）<br>
+            <input type="radio" name="apStability" value="0"> &gt;10mm（0分）<br>
+        </div>
+
+        <!-- 4. Mediolateral Stability -->
+        <div class="section">
+            <label>4. Mediolateral Stability（15分滿分）</label>
+            <input type="radio" name="mlStability" value="15" required=""> &lt;5°（15分）<br>
+            <input type="radio" name="mlStability" value="10"> 6-9°（10分）<br>
+            <input type="radio" name="mlStability" value="5"> 10-14°（5分）<br>
+            <input type="radio" name="mlStability" value="5"> &gt;14°（5分）<br>
+        </div>
+
+        <!-- 5. Flexion Contracture -->
+        <div class="section">
+            <label>5. Flexion Contracture（扣分項）</label>
+            <input type="radio" name="flexionContracture" value="0" required=""> &lt;5°（0分）<br>
+            <input type="radio" name="flexionContracture" value="-2"> 5-10°（-2分）<br>
+            <input type="radio" name="flexionContracture" value="-5"> 11-15°（-5分）<br>
+            <input type="radio" name="flexionContracture" value="-10"> 16-20°（-10分）<br>
+            <input type="radio" name="flexionContracture" value="-15"> &gt;20°（-15分）<br>
+        </div>
+
+        <!-- 6. Extension Lag -->
+        <div class="section">
+            <label>6. Extension Lag（扣分項）</label>
+            <input type="radio" name="extensionLag" value="0" required=""> 無（0分）<br>
+            <input type="radio" name="extensionLag" value="-5"> &lt;10°（-5分）<br>
+            <input type="radio" name="extensionLag" value="-10"> 10-20°（-10分）<br>
+            <input type="radio" name="extensionLag" value="-15"> &gt;20°（-15分）<br>
+        </div>
+
+        <!-- 7. Alignment (Valgus angle) -->
+        <div class="section">
+            <label>7. Alignment (Valgus angle)(扣分項）</label>
+            <select id="alignment" required="">
+                <option value="">請選擇</option>
+                <option value="-3">0°（-3分）</option>
+                <option value="-6">1°（-6分）</option>
+                <option value="-9">2°（-9分）</option>
+                <option value="-12">3°（-12分）</option>
+                <option value="-15">4°（-15分）</option>
+                <option value="0">5-10°（0分）</option>
+                <option value="-3">11°（-3分）</option>
+                <option value="-6">12°（-6分）</option>
+                <option value="-9">13°（-9分）</option>
+                <option value="-12">14°（-12分）</option>
+                <option value="-15">15°（-15分）</option>
+                <option value="-20">內翻任何角度（-20分）</option>
+            </select>
+        </div>
+
+        <div class="button-container">
+            <button type="button" id="calculateBtn" onclick="calculateScore()">計算總分</button>
+            <button type="button" id="clearBtn" onclick="clearForm()">清除</button>
+        </div>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateScore() {
+            let totalScore = 0;
+
+            // 1. 疼痛程度
+            const pain = document.querySelector('input[name="pain"]:checked');
+            if (pain) totalScore += parseInt(pain.value);
+
+            // 2. Flexion PROM
+            const flexionPROM = document.getElementById('flexionPROM').value;
+            if (flexionPROM) totalScore += Math.floor(parseInt(flexionPROM) / 5);
+
+            // 3. 前後穩定性
+            const apStability = document.querySelector('input[name="apStability"]:checked');
+            if (apStability) totalScore += parseInt(apStability.value);
+
+            // 4. 內外側穩定性
+            const mlStability = document.querySelector('input[name="mlStability"]:checked');
+            if (mlStability) totalScore += parseInt(mlStability.value);
+
+            // 5. 屈曲攣縮
+            const flexionContracture = document.querySelector('input[name="flexionContracture"]:checked');
+            if (flexionContracture) totalScore += parseInt(flexionContracture.value);
+
+            // 6. 伸展遲滯
+            const extensionLag = document.querySelector('input[name="extensionLag"]:checked');
+            if (extensionLag) totalScore += parseInt(extensionLag.value);
+
+            // 7. 對齊
+            const alignment = document.getElementById('alignment').value;
+            if (alignment) totalScore += parseInt(alignment);
+
+            // 確定評級
+            let rating = '';
+            if (totalScore >= 77 && totalScore <= 100) {
+                rating = '良好';
+            } else if (totalScore >= 65 && totalScore <= 76) {
+                rating = '中等';
+            } else if (totalScore >= 0 && totalScore <= 64) {
+                rating = '嚴重';
+            } else {
+                rating = '無效（請檢查輸入）';
+            }
+
+            // 顯示結果
+            document.getElementById('result').innerHTML = `總分：${totalScore} 分<br>評級：${rating}`;
+        }
+
+        function clearForm() {
+            document.getElementById('kssForm').reset();
+            document.getElementById('result').innerHTML = '';
+        }
+    </script>
+
+
+</body></html>Ytext/htmlP_Nhttps://frankcheung217.github.io/Outcome-Measures/Knee%20Society%20Score1.html    ( F X n � � �"�"�"�                           "�
