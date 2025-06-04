@@ -1,0 +1,287 @@
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STarT 背部檢測工具 - 繁體中文版</title>
+    <style>
+        body {
+            font-family: Arial, 'Microsoft YaHei', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .calculator {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 700px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            display: block;
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .option-button {
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .option-button.selected {
+            background-color: #03a9f4;
+            color: white;
+            border-color: #0288d1;
+        }
+        .option-button:hover {
+            background-color: #e0e0e0;
+        }
+        .option-button.selected:hover {
+            background-color: #0288d1;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .button {
+            padding: 12px 30px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .button.calculate {
+            background-color: #03a9f4;
+            color: white;
+        }
+        .button.calculate:hover {
+            background-color: #0288d1;
+            transform: scale(1.05);
+        }
+        .button.clear {
+            background-color: #ff5722;
+            color: white;
+        }
+        .button.clear:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+        #result {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #e8f0fe;
+            border-radius: 10px;
+            display: none;
+        }
+        #result p {
+            font-size: 1.3rem;
+            color: #333;
+            margin: 8px 0;
+        }
+        #result p.explanation {
+            font-size: 1.1rem;
+            color: #333;
+            font-style: italic;
+        }
+        #error {
+            color: red;
+            font-size: 1.2rem;
+            display: none;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 500px) {
+            .calculator {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .question label {
+                font-size: 1.2rem;
+            }
+            .option-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+            .button {
+                padding: 10px 20px;
+                font-size: 1.1rem;
+            }
+            #result p {
+                font-size: 1.1rem;
+            }
+            #result p.explanation {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>STarT 背部檢測工具 - 繁體中文版</h1>
+        <form id="startBackForm">
+            <div id="error"></div>
+            <div class="question">
+                <label>1. 在過去兩周，我的背痛曾經擴散到腿部。</label>
+                <div class="button-group">
+                    <button type="button" class="option-button" data-name="q1" data-value="0">不同意</button>
+                    <button type="button" class="option-button" data-name="q1" data-value="1">同意</button>
+                </div>
+            </div>
+            <div class="question">
+                <label>2. 在過去兩周，我有時會有肩、頸部痛的情況。</label>
+                <div class="button-group">
+                    <button type="button" class="option-button" data-name="q2" data-value="0">不同意</button>
+                    <button type="button" class="option-button" data-name="q2" data-value="1">同意</button>
+                </div>
+            </div>
+            <div class="question">
+                <label>3. 我曾因為背痛而僅能作短距離步行</label>
+                <div class="button-group">
+                    <button type="button" class="option-button" data-name="q3" data-value="0">不同意</button>
+                    <button type="button" class="option-button" data-name="q3" data-value="1">同意</button>
+                </div>
+            </div>
+            <div class="question">
+                <label>4. 在過去兩周，我曾因為背痛導致穿衣服的速度比平常緩慢</label>
+                <div class="button-group">
+                    <button type="button" class="option-button" data-name="q4" data-value="0">不同意</button>
+                    <button type="button" class="option-button" data-name="q4" data-value="1">同意</button>
+                </div>
+            </div>
+            <div class="question">
+                <label>5. 我認為對於一個和我有相同狀況的人來說，體力活動是不安全的</label>
+                <div class="button-group">
+                    <button type="button" class="option-button" data-name="q5" data-value="0">不同意</button>
+                    <button type="button" class="option-button" data-name="q5" data-value="1">同意</button>
+                </div>
+            </div>
+            <div class="question">
+                <label>6. 我經常會擔心我的背痛</label>
+                <div class="button-group">
+                    <button type="button" class="option-button" data-name="q6" data-value="0">不同意</button>
+                    <button type="button" class="option-button" data-name="q6" data-value="1">同意</button>
+                </div>
+            </div>
+            <div class="question">
+                <label>7. 我覺得我的背痛很嚴重，而且永遠不會得到任何改善</label>
+                <div class="button-group">
+                    <button type="button" class="option-button" data-name="q7" data-value="0">不同意</button>
+                    <button type="button" class="option-button" data-name "q7" data-value="1">同意</button>
+                </div>
+            </div>
+            <div class="question">
+                <label>8. 整體而言，我不再享受過去喜歡做的事</label>
+                <div class="button-group">
+                    <button type="button" class="option-button" data-name="q8" data-value="0">不同意</button>
+                    <button type="button" class="option-button" data-name="q8" data-value="1">同意</button>
+                </div>
+            </div>
+            <div class="question">
+                <label>9. 整體而言，過去兩周內背痛對您的影響程度如何?</label>
+                <div class="button-group">
+                    <button type="button" class="option-button" data-name="q9" data-value="0">完全不受影響</button>
+                    <button type="button" class="option-button" data-name="q9" data-value="0">輕微影響</button>
+                    <button type="button" class="option-button" data-name="q9" data-value="0">中度影響</button>
+                    <button type="button" class="option-button" data-name="q9" data-value="1">非常影響</button>
+                    <button type="button" class="option-button" data-name="q9" data-value="1">極度影響</button>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="button" class="button calculate" onclick="calculateScore()">計算</button>
+                <button type="button" class="button clear" onclick="clearForm()">清除</button>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // Handle button selection
+        document.querySelectorAll('.option-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const name = this.dataset.name;
+                document.querySelectorAll(`.option-button[data-name="${name}"]`).forEach(btn => {
+                    btn.classList.remove('selected');
+                });
+                this.classList.add('selected');
+            });
+        });
+
+        function calculateScore() {
+            const form = document.getElementById('startBackForm');
+            const resultDiv = document.getElementById('result');
+            const errorDiv = document.getElementById('error');
+            errorDiv.style.display = 'none';
+
+            const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9'];
+            for (let q of questions) {
+                if (!document.querySelector(`.option-button[data-name="${q}"].selected`)) {
+                    errorDiv.textContent = `請回答所有問題！缺少: ${q}`;
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+            }
+
+            let totalScore = 0;
+            questions.forEach(q => {
+                const selectedButton = document.querySelector(`.option-button[data-name="${q}"].selected`);
+                totalScore += parseInt(selectedButton.dataset.value);
+            });
+
+            let psychoScore = 0;
+            ['q5', 'q6', 'q7', 'q8', 'q9'].forEach(q => {
+                const selectedButton = document.querySelector(`.option-button[data-name="${q}"].selected`);
+                psychoScore += parseInt(selectedButton.dataset.value);
+            });
+
+            let riskCategory = totalScore <= 3 ? '低風險' : (totalScore >= 4 && psychoScore < 4) ? '中風險' : '高風險';
+
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <p><strong>總分：</strong> ${totalScore} (滿分9分)</p>
+                <p><strong>心理社會分量表得分：</strong> ${psychoScore} (滿分5分)</p>
+                <p><strong>風險類別：</strong> ${riskCategory}</p>
+                <p class="explanation"><em>說明：低風險表示持續性殞疾的可能性較低；中風險表示需要進一步評估；高風險表示可能需要心理社會干預。</em></p>
+            `;
+        }
+
+        function clearForm() {
+            const form = document.getElementById('startBackForm');
+            const resultDiv = document.getElementById('result');
+            const errorDiv = document.getElementById('error');
+            form.querySelectorAll('.option-button').forEach(btn => btn.classList.remove('selected'));
+            resultDiv.style.display = 'none';
+            resultDiv.innerHTML = '';
+            errorDiv.style.display = 'none';
+            errorDiv.textContent = '';
+        }
+    </script>
+</body>
+</html>
