@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STarT Back 篩檢問卷 (繁體中文版)</title>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .question {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .question label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .option-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .option-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            flex: 1;
+        }
+        .option-buttons button:hover {
+            background-color: #45a049;
+        }
+        .option-buttons button.selected {
+            background-color: #2e7d32;
+            font-weight: bold;
+        }
+        #clear-btn, #submit-btn {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            width: 120px;
+        }
+        #clear-btn {
+            background-color: #f44336;
+        }
+        #clear-btn:hover {
+            background-color: #d32f2f;
+        }
+        #submit-btn:hover {
+            background-color: #1976D2;
+        }
+        @media (max-width: 500px) {
+            .form-container {
+                padding: 15px;
+            }
+            .option-buttons button {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>STarT Back 篩檢問卷 (繁體中文版)</h1>
+        <form id="start-back-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <label>1. 我的背痛已經擴散到我的腿部（例如坐骨神經痛）。 </label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q1', 1)">同意</button>
+                    <button type="button" onclick="selectOption(this, 'q1', 0)">不同意</button>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <label>2. 我有肩部或頸部疼痛。 </label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q2', 1)">同意</button>
+                    <button type="button" onclick="selectOption(this, 'q2', 0)">不同意</button>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <label>3. 由於背痛，我在家中四處走動有困難。 </label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q3', 1)">同意</button>
+                    <button type="button" onclick="selectOption(this, 'q3', 0)">不同意</button>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <label>4. 由於背痛，我穿衣或脫衣時有困難。 </label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q4', 1)">同意</button>
+                    <button type="button" onclick="selectOption(this, 'q4', 0)">不同意</button>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <label>5. 我只在最喜歡的活動中才感到快樂。 </label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q5', 1)">同意</button>
+                    <button type="button" onclick="selectOption(this, 'q5', 0)">不同意</button>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <label>6. 我對任何事情都比平時更加煩躁。 </label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q6', 1)">同意</button>
+                    <button type="button" onclick="selectOption(this, 'q6', 0)">不同意</button>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <label>7. 我覺得我的背痛很可怕，且永遠不會好轉。 </label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q7', 1)">同意</button>
+                    <button type="button" onclick="selectOption(this, 'q7', 0)">不同意</button>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <label>8. 總的來說，我最近不太享受我所做的事情。 </label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q8', 1)">同意</button>
+                    <button type="button" onclick="selectOption(this, 'q8', 0)">不同意</button>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <label>9. 總的來說，你的背痛有多嚴重？ </label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q9', 0)">完全沒有困擾</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 0)">稍微困擾</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 0)">中度困擾</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 1)">很困擾</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 1)">極度困擾</button>
+                </div>
+            </div>
+
+            <!-- Form Buttons -->
+            <div>
+                <button type="button" id="clear-btn" onclick="clearForm()">清除</button>
+                <button type="submit" id="submit-btn">提交</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function selectOption(button, questionId, score) {
+            // Remove 'selected' class from all buttons in the same question
+            const buttons = button.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            // Add 'selected' class to clicked button
+            button.classList.add('selected');
+            // Store the score in a hidden input for form submission
+            let input = document.querySelector(`input[name="${questionId}"]`);
+            if (!input) {
+                input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = questionId;
+                document.getElementById('start-back-form').appendChild(input);
+            }
+            input.value = score;
+        }
+
+        function clearForm() {
+            // Reset all buttons and hidden inputs
+            const buttons = document.querySelectorAll('.option-buttons button');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            const inputs = document.querySelectorAll('#start-back-form input[type="hidden"]');
+            inputs.forEach(input => input.remove());
+        }
+
+        document.getElementById('start-back-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Calculate total score and psychosocial subscale score
+            let totalScore = 0;
+            let psychosocialScore = 0;
+            const inputs = document.querySelectorAll('#start-back-form input[type="hidden"]');
+            inputs.forEach(input => {
+                const score = parseInt(input.value);
+                totalScore += score;
+                if (['q5', 'q6', 'q7', 'q8', 'q9'].includes(input.name)) {
+                    psychosocialScore += score;
+                }
+            });
+            // Display results (for demonstration; in practice, you may send to a server)
+            alert(`總分: ${totalScore}\n心理社會分數: ${psychosocialScore}\n風險分級: ${totalScore <= 3 ? '低風險' : (psychosocialScore <= 3 ? '中風險' : '高風險')}`);
+        });
+    </script>
+</body>
+</html>
