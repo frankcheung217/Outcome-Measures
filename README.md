@@ -6,6 +6,8 @@
 
 <a href="KOOS.html"><button style="padding:15px 30px: font-size: 20px: background-colour:#ffc622; font-weight: bold;"> 膝關節評分表(KOOS)</button><a/>
 
+<a href="KOOS ENG.html"><button style="padding:15px 30px: font-size: 20px: background-colour:#ffc622; font-weight: bold;"> Knee Injury and Osteoarthritis Outcome Score(KOOS)</button><a/>
+
 <a href="Knee Society Score1.html"><button style="padding:15px 30px: font-size: 20px: background-colour:#ffc622; font-weight: bold;"> 膝關節評分表(KSS)</button><a/>
 
 <a href="Northwick Park 頸痛問卷.html"><button style="padding:15px 30px: font-size: 20px: background-colour:#ffc622; font-weight: bold;"> Northwick Park 頸痛問卷(NPQ)</button><a/>
