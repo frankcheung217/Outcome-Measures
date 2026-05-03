@@ -25,6 +25,12 @@
             font-size: 24px;
             margin-bottom: 20px;
         }
+        .instruction {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 25px;
+            text-align: center;
+        }   
         .question {
             text-align: left;
             margin-bottom: 20px;
@@ -90,10 +96,12 @@
 <body>
     <div class="form-container">
         <h1>STarT Back 篩檢問卷 (繁體中文版)</h1>
+        <p class="instruction">請按過去兩周內的情況來回答下列問題:</p>
+        
         <form id="start-back-form">
             <!-- Question 1 -->
             <div class="question">
-                <label>1. 我的背痛已經擴散到我的腿部（例如坐骨神經痛）。 </label>
+                <label>1. 在過去兩周, 我的背痛曾經擴散到腿部 </label>
                 <div class="option-buttons">
                     <button type="button" onclick="selectOption(this, 'q1', 1)">同意</button>
                     <button type="button" onclick="selectOption(this, 'q1', 0)">不同意</button>
@@ -102,7 +110,7 @@
 
             <!-- Question 2 -->
             <div class="question">
-                <label>2. 我有肩部或頸部疼痛。 </label>
+                <label>2. 在過去兩周,我有時會有肩、頸部痛的情況 </label>
                 <div class="option-buttons">
                     <button type="button" onclick="selectOption(this, 'q2', 1)">同意</button>
                     <button type="button" onclick="selectOption(this, 'q2', 0)">不同意</button>
@@ -111,7 +119,7 @@
 
             <!-- Question 3 -->
             <div class="question">
-                <label>3. 由於背痛，我在家中四處走動有困難。 </label>
+                <label>3. 我曾因為背痛而僅能作短距離步行 </label>
                 <div class="option-buttons">
                     <button type="button" onclick="selectOption(this, 'q3', 1)">同意</button>
                     <button type="button" onclick="selectOption(this, 'q3', 0)">不同意</button>
@@ -120,7 +128,7 @@
 
             <!-- Question 4 -->
             <div class="question">
-                <label>4. 由於背痛，我穿衣或脫衣時有困難。 </label>
+                <label>4. 在過去兩周,我曾因為背痛導致穿衣服的速度比平常緩慢 </label>
                 <div class="option-buttons">
                     <button type="button" onclick="selectOption(this, 'q4', 1)">同意</button>
                     <button type="button" onclick="selectOption(this, 'q4', 0)">不同意</button>
@@ -129,7 +137,7 @@
 
             <!-- Question 5 -->
             <div class="question">
-                <label>5. 我只在最喜歡的活動中才感到快樂。 </label>
+                <label>5. 我認為對於一個和我有相同狀況的人來說,體力活動是不安全的 </label>
                 <div class="option-buttons">
                     <button type="button" onclick="selectOption(this, 'q5', 1)">同意</button>
                     <button type="button" onclick="selectOption(this, 'q5', 0)">不同意</button>
@@ -138,7 +146,7 @@
 
             <!-- Question 6 -->
             <div class="question">
-                <label>6. 我對任何事情都比平時更加煩躁。 </label>
+                <label>6. 我經常會擔心我的背痛 </label>
                 <div class="option-buttons">
                     <button type="button" onclick="selectOption(this, 'q6', 1)">同意</button>
                     <button type="button" onclick="selectOption(this, 'q6', 0)">不同意</button>
@@ -147,7 +155,7 @@
 
             <!-- Question 7 -->
             <div class="question">
-                <label>7. 我覺得我的背痛很可怕，且永遠不會好轉。 </label>
+                <label>7. 我覺得我的背痛很嚴重, 而且永遠不會得到任何改善 </label>
                 <div class="option-buttons">
                     <button type="button" onclick="selectOption(this, 'q7', 1)">同意</button>
                     <button type="button" onclick="selectOption(this, 'q7', 0)">不同意</button>
@@ -156,7 +164,7 @@
 
             <!-- Question 8 -->
             <div class="question">
-                <label>8. 總的來說，我最近不太享受我所做的事情。 </label>
+                <label>8. 整體而言,	我不再享受過去喜歡做的事 </label>
                 <div class="option-buttons">
                     <button type="button" onclick="selectOption(this, 'q8', 1)">同意</button>
                     <button type="button" onclick="selectOption(this, 'q8', 0)">不同意</button>
@@ -165,13 +173,13 @@
 
             <!-- Question 9 -->
             <div class="question">
-                <label>9. 總的來說，你的背痛有多嚴重？ </label>
+                <label>9. 整體而言， 過去兩周內背痛對您的影響程度如何 </label>
                 <div class="option-buttons">
-                    <button type="button" onclick="selectOption(this, 'q9', 0)">完全沒有困擾</button>
-                    <button type="button" onclick="selectOption(this, 'q9', 0)">稍微困擾</button>
-                    <button type="button" onclick="selectOption(this, 'q9', 0)">中度困擾</button>
-                    <button type="button" onclick="selectOption(this, 'q9', 1)">很困擾</button>
-                    <button type="button" onclick="selectOption(this, 'q9', 1)">極度困擾</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 0)">完全不受影響</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 0)">輕微影響</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 0)">中度影響</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 1)">非常影響</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 1)">極度影響</button>
                 </div>
             </div>
 
