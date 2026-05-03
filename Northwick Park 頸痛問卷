@@ -100,11 +100,11 @@
         <div class="section">
             <div class="question">
                 <span class="question-label">1. 您目前的頸痛程度如何？</span>
-                <input type="radio" name="q1" value="0"> 1. 目前沒有頸痛<br>
-                <input type="radio" name="q1" value="1"> 2. 目前頸痛很輕微<br>
-                <input type="radio" name="q1" value="2"> 3. 目前頸痛中等<br>
-                <input type="radio" name="q1" value="3"> 4. 目前頸痛嚴重<br>
-                <input type="radio" name="q1" value="4"> 5. 目前頸痛非常嚴重
+                <input type="radio" name="q1" value="0"> 目前沒有頸痛<br>
+                <input type="radio" name="q1" value="1"> 目前頸痛很輕微<br>
+                <input type="radio" name="q1" value="2"> 目前頸痛中等<br>
+                <input type="radio" name="q1" value="3"> 目前頸痛嚴重<br>
+                <input type="radio" name="q1" value="4"> 目前頸痛非常嚴重
             </div>
         </div>
 
@@ -112,11 +112,11 @@
         <div class="section">
             <div class="question">
                 <span class="question-label">2. 頸痛對您睡眠的影響？</span>
-                <input type="radio" name="q2" value="0"> 1. 頸痛不會影響我的睡眠<br>
-                <input type="radio" name="q2" value="1"> 2. 我的睡眠因頸痛而輕微受影響<br>
-                <input type="radio" name="q2" value="2"> 3. 我的睡眠因頸痛而中等受影響<br>
-                <input type="radio" name="q2" value="3"> 4. 我的睡眠因頸痛而嚴重受影響<br>
-                <input type="radio" name="q2" value="4"> 5. 由於頸痛，我幾乎無法入睡
+                <input type="radio" name="q2" value="0"> 頸痛不會影響我的睡眠<br>
+                <input type="radio" name="q2" value="1"> 我的睡眠因頸痛而輕微受影響<br>
+                <input type="radio" name="q2" value="2"> 我的睡眠因頸痛而中等受影響<br>
+                <input type="radio" name="q2" value="3"> 我的睡眠因頸痛而嚴重受影響<br>
+                <input type="radio" name="q2" value="4"> 由於頸痛，我幾乎無法入睡
             </div>
         </div>
 
@@ -124,11 +124,11 @@
         <div class="section">
             <div class="question">
                 <span class="question-label">3. 夜間手臂是否有麻木或刺痛？</span>
-                <input type="radio" name="q3" value="0"> 1. 夜間從無麻木或刺痛<br>
-                <input type="radio" name="q3" value="1"> 2. 夜間偶爾有輕微麻木或刺痛<br>
-                <input type="radio" name="q3" value="2"> 3. 夜間經常有中等程度的麻木或刺痛<br>
-                <input type="radio" name="q3" value="3"> 4. 夜間經常有嚴重的麻木或刺痛<br>
-                <input type="radio" name="q3" value="4"> 5. 夜間因麻木或刺痛而無法入睡
+                <input type="radio" name="q3" value="0"> 夜間從無麻木或刺痛<br>
+                <input type="radio" name="q3" value="1"> 夜間偶爾有輕微麻木或刺痛<br>
+                <input type="radio" name="q3" value="2"> 夜間經常有中等程度的麻木或刺痛<br>
+                <input type="radio" name="q3" value="3"> 夜間經常有嚴重的麻木或刺痛<br>
+                <input type="radio" name="q3" value="4"> 夜間因麻木或刺痛而無法入睡
             </div>
         </div>
 
@@ -136,11 +136,11 @@
         <div class="section">
             <div class="question">
                 <span class="question-label">4. 您的頸痛症狀每天持續多久？</span>
-                <input type="radio" name="q4" value="0"> 1. 沒有頸痛<br>
-                <input type="radio" name="q4" value="1"> 2. 症狀偶爾出現（少於1小時）<br>
-                <input type="radio" name="q4" value="2"> 3. 症狀持續數小時<br>
-                <input type="radio" name="q4" value="3"> 4. 症狀持續大部分時間<br>
-                <input type="radio" name="q4" value="4"> 5. 症狀持續整天
+                <input type="radio" name="q4" value="0"> 沒有頸痛<br>
+                <input type="radio" name="q4" value="1"> 症狀偶爾出現（少於1小時）<br>
+                <input type="radio" name="q4" value="2"> 症狀持續數小時<br>
+                <input type="radio" name="q4" value="3"> 症狀持續大部分時間<br>
+                <input type="radio" name="q4" value="4"> 症狀持續整天
             </div>
         </div>
 
@@ -148,11 +148,11 @@
         <div class="section">
             <div class="question">
                 <span class="question-label">5. 您能提重物的情況？</span>
-                <input type="radio" name="q5" value="0"> 1. 我能提重物而不會有問題<br>
-                <input type="radio" name="q5" value="1"> 2. 我能提重物但會感到有些不適<br>
-                <input type="radio" name="q5" value="2"> 3. 提重物會令我的頸痛加劇<br>
-                <input type="radio" name="q5" value="3"> 4. 我只能提輕的物件<br>
-                <input type="radio" name="q5" value="4"> 5. 我幾乎無法提任何東西
+                <input type="radio" name="q5" value="0"> 我能提重物而不會有問題<br>
+                <input type="radio" name="q5" value="1"> 我能提重物但會感到有些不適<br>
+                <input type="radio" name="q5" value="2"> 提重物會令我的頸痛加劇<br>
+                <input type="radio" name="q5" value="3"> 我只能提輕的物件<br>
+                <input type="radio" name="q5" value="4"> 我幾乎無法提任何東西
             </div>
         </div>
 
@@ -160,11 +160,11 @@
         <div class="section">
             <div class="question">
                 <span class="question-label">6. 閱讀或看電視的情況？</span>
-                <input type="radio" name="q6" value="0"> 1. 我能隨意閱讀或看電視而不會有問題<br>
-                <input type="radio" name="q6" value="1"> 2. 我能閱讀或看電視但會感到有些不適<br>
-                <input type="radio" name="q6" value="2"> 3. 閱讀或看電視會令我的頸痛加劇<br>
-                <input type="radio" name="q6" value="3"> 4. 我只能短時間閱讀或看電視<br>
-                <input type="radio" name="q6" value="4"> 5. 我因頸痛而無法閱讀或看電視
+                <input type="radio" name="q6" value="0"> 我能隨意閱讀或看電視而不會有問題<br>
+                <input type="radio" name="q6" value="1"> 我能閱讀或看電視但會感到有些不適<br>
+                <input type="radio" name="q6" value="2"> 閱讀或看電視會令我的頸痛加劇<br>
+                <input type="radio" name="q6" value="3"> 我只能短時間閱讀或看電視<br>
+                <input type="radio" name="q6" value="4"> 我因頸痛而無法閱讀或看電視
             </div>
         </div>
 
@@ -172,11 +172,11 @@
         <div class="section">
             <div class="question">
                 <span class="question-label">7. 工作或做家務的情況？</span>
-                <input type="radio" name="q7" value="0"> 1. 我能正常工作或做家務而不會有問題<br>
-                <input type="radio" name="q7" value="1"> 2. 我能工作或做家務但會感到有些不適<br>
-                <input type="radio" name="q7" value="2"> 3. 工作或家務會令我的頸痛加劇<br>
-                <input type="radio" name="q7" value="3"> 4. 我只能做輕的工作或家務<br>
-                <input type="radio" name="q7" value="4"> 5. 我因頸痛而無法工作或做家務
+                <input type="radio" name="q7" value="0"> 我能正常工作或做家務而不會有問題<br>
+                <input type="radio" name="q7" value="1"> 我能工作或做家務但會感到有些不適<br>
+                <input type="radio" name="q7" value="2"> 工作或家務會令我的頸痛加劇<br>
+                <input type="radio" name="q7" value="3"> 我只能做輕的工作或家務<br>
+                <input type="radio" name="q7" value="4"> 我因頸痛而無法工作或做家務
             </div>
         </div>
 
@@ -184,11 +184,11 @@
         <div class="section">
             <div class="question">
                 <span class="question-label">8. 您的社交活動受影響程度？</span>
-                <input type="radio" name="q8" value="0"> 1. 我的社交活動完全不受影響<br>
-                <input type="radio" name="q8" value="1"> 2. 我的社交活動輕微受影響<br>
-                <input type="radio" name="q8" value="2"> 3. 我的社交活動中等受影響<br>
-                <input type="radio" name="q8" value="3"> 4. 我的社交活動嚴重受影響<br>
-                <input type="radio" name="q8" value="4"> 5. 我因頸痛而無法參與任何社交活動
+                <input type="radio" name="q8" value="0"> 我的社交活動完全不受影響<br>
+                <input type="radio" name="q8" value="1"> 我的社交活動輕微受影響<br>
+                <input type="radio" name="q8" value="2"> 我的社交活動中等受影響<br>
+                <input type="radio" name="q8" value="3"> 我的社交活動嚴重受影響<br>
+                <input type="radio" name="q8" value="4"> 我因頸痛而無法參與任何社交活動
             </div>
         </div>
 
@@ -196,11 +196,11 @@
         <div class="section">
             <div class="question">
                 <span class="question-label">9. 駕駛的情況（若您不駕駛，請不要勾選此題）</span>
-                <input type="radio" name="q9" value="0"> 1. 我能隨意駕駛而不會有問題<br>
-                <input type="radio" name="q9" value="1"> 2. 我能駕駛但會感到有些不適<br>
-                <input type="radio" name="q9" value="2"> 3. 駕駛會令我的頸痛加劇<br>
-                <input type="radio" name="q9" value="3"> 4. 我只能短時間駕駛<br>
-                <input type="radio" name="q9" value="4"> 5. 我因頸痛而無法駕駛
+                <input type="radio" name="q9" value="0"> 我能隨意駕駛而不會有問題<br>
+                <input type="radio" name="q9" value="1"> 我能駕駛但會感到有些不適<br>
+                <input type="radio" name="q9" value="2"> 駕駛會令我的頸痛加劇<br>
+                <input type="radio" name="q9" value="3"> 我只能短時間駕駛<br>
+                <input type="radio" name="q9" value="4"> 我因頸痛而無法駕駛
             </div>
             <p class="note">※ 若您不駕駛，請不要選擇本題任何選項，計算時將自動扣除此題。</p>
         </div>
