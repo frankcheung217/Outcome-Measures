@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STarT Back Screening Tool (English)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .instruction {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .question {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .question label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .option-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .option-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            flex: 1;
+        }
+        .option-buttons button:hover {
+            background-color: #45a049;
+        }
+        .option-buttons button.selected {
+            background-color: #2e7d32;
+            font-weight: bold;
+        }
+        #clear-btn, #submit-btn {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            width: 120px;
+        }
+        #clear-btn {
+            background-color: #f44336;
+        }
+        #clear-btn:hover {
+            background-color: #d32f2f;
+        }
+        #submit-btn:hover {
+            background-color: #1976D2;
+        }
+        @media (max-width: 500px) {
+            .form-container {
+                padding: 15px;
+            }
+            .option-buttons button {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>STarT Back Screening Tool (English)</h1>
+        <p class="instruction">Thinking about the last 2 weeks, tick your response to the following questions:</p>
+
+        <form id="start-back-form">
+
+            <!-- Question 1 -->
+            <div class="question">
+                <label>1. My back pain has spread down my leg(s) at some time in the last 2 weeks.</label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q1', 1)">Agree</button>
+                    <button type="button" onclick="selectOption(this, 'q1', 0)">Disagree</button>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <label>2. I have had pain in the shoulder or neck at some time in the last 2 weeks.</label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q2', 1)">Agree</button>
+                    <button type="button" onclick="selectOption(this, 'q2', 0)">Disagree</button>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <label>3. I have only walked short distances because of my back pain.</label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q3', 1)">Agree</button>
+                    <button type="button" onclick="selectOption(this, 'q3', 0)">Disagree</button>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <label>4. In the last 2 weeks, I have dressed more slowly than usual because of back pain.</label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q4', 1)">Agree</button>
+                    <button type="button" onclick="selectOption(this, 'q4', 0)">Disagree</button>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <label>5. It’s not really safe for a person with a condition like mine to be physically active.</label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q5', 1)">Agree</button>
+                    <button type="button" onclick="selectOption(this, 'q5', 0)">Disagree</button>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <label>6. Worrying thoughts have been going through my mind a lot of the time in the last 2 weeks.</label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q6', 1)">Agree</button>
+                    <button type="button" onclick="selectOption(this, 'q6', 0)">Disagree</button>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <label>7. I feel that my back pain is terrible and it’s never going to get any better.</label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q7', 1)">Agree</button>
+                    <button type="button" onclick="selectOption(this, 'q7', 0)">Disagree</button>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <label>8. In general I have not enjoyed all the things I used to enjoy in the last 2 weeks.</label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q8', 1)">Agree</button>
+                    <button type="button" onclick="selectOption(this, 'q8', 0)">Disagree</button>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <label>9. Overall, how bothersome has your back pain been in the last 2 weeks?</label>
+                <div class="option-buttons">
+                    <button type="button" onclick="selectOption(this, 'q9', 0)">Not at all</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 0)">Slightly</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 0)">Moderately</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 1)">Very much</button>
+                    <button type="button" onclick="selectOption(this, 'q9', 1)">Extremely</button>
+                </div>
+            </div>
+
+            <!-- Form Buttons -->
+            <div>
+                <button type="button" id="clear-btn" onclick="clearForm()">Clear</button>
+                <button type="button" id="submit-btn" onclick="calculateScore()">Calculate</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function selectOption(button, questionId, score) {
+            const buttons = button.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            button.classList.add('selected');
+
+            let input = document.querySelector(`input[name="${questionId}"]`);
+            if (!input) {
+                input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = questionId;
+                document.getElementById('start-back-form').appendChild(input);
+            }
+            input.value = score;
+        }
+
+        function clearForm() {
+            const buttons = document.querySelectorAll('.option-buttons button');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            const inputs = document.querySelectorAll('#start-back-form input[type="hidden"]');
+            inputs.forEach(input => input.remove());
+        }
+
+        function calculateScore() {
+            let totalScore = 0;
+            let psychosocialScore = 0;
+            const inputs = document.querySelectorAll('#start-back-form input[type="hidden"]');
+            
+            inputs.forEach(input => {
+                const score = parseInt(input.value);
+                totalScore += score;
+                if (['q5', 'q6', 'q7', 'q8', 'q9'].includes(input.name)) {
+                    psychosocialScore += score;
+                }
+            });
+
+            if (totalScore === 0 && psychosocialScore === 0) {
+                alert("Please answer at least some questions.");
+                return;
+            }
+
+            let riskLevel = totalScore <= 3 ? "Low Risk" : 
+                           (psychosocialScore >= 4 ? "High Risk" : "Medium Risk");
+
+            alert(`STarT Back Result\n\nTotal Score: ${totalScore} / 9\nPsychosocial Score: ${psychosocialScore} / 5\n\nRisk Level: ${riskLevel}`);
+        }
+    </script>
+</body>
+</html>
