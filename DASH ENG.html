@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickDASH Questionnaire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .question-block {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .question-block h5 {
+            color: #1a3c6d;
+            margin-bottom: 10px;
+        }
+        .btn-option {
+            margin: 5px;
+            min-width: 120px;
+        }
+        .results {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">QuickDASH Questionnaire</h1>
+        <p class="text-left mb-4">Please rate your ability to do the following activities in the last week by selecting the appropriate response.</p>
+        
+        <form id="quickdashForm">
+
+            <div class="question-block">
+                <h4>QuickDASH (11 items)</h4>
+                
+                <!-- Q1 -->
+                <div class="question-block">
+                    <h5>1. Open a tight or new jar</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q1" id="Q1-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q1-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q1" id="Q1-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q1-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q1" id="Q1-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q1-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q1" id="Q1-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q1-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q1" id="Q1-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q1-5">Unable</label>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="question-block">
+                    <h5>2. Do heavy household chores (e.g., wash walls, floors)</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q2" id="Q2-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q2-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q2" id="Q2-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q2-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q2" id="Q2-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q2-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q2" id="Q2-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q2-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q2" id="Q2-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q2-5">Unable</label>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="question-block">
+                    <h5>3. Carry a shopping bag or briefcase</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q3" id="Q3-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q3-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q3" id="Q3-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q3-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q3" id="Q3-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q3-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q3" id="Q3-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q3-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q3" id="Q3-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q3-5">Unable</label>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="question-block">
+                    <h5>4. Wash your back</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q4" id="Q4-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q4-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q4" id="Q4-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q4-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q4" id="Q4-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q4-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q4" id="Q4-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q4-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q4" id="Q4-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q4-5">Unable</label>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="question-block">
+                    <h5>5. Use a knife to cut food</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q5" id="Q5-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q5-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q5" id="Q5-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q5-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q5" id="Q5-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q5-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q5" id="Q5-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q5-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q5" id="Q5-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q5-5">Unable</label>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="question-block">
+                    <h5>6. Recreational activities which require some force or impact through your arm, shoulder or hand (e.g. golf, hammering, tennis)</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q6" id="Q6-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q6-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q6" id="Q6-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q6-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q6" id="Q6-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q6-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q6" id="Q6-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q6-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q6" id="Q6-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q6-5">Unable</label>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="question-block">
+                    <h5>7. During the usual work day, how much difficulty do you have using your arm, shoulder or hand?</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q7" id="Q7-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q7-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q7" id="Q7-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q7-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q7" id="Q7-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q7-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q7" id="Q7-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q7-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q7" id="Q7-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q7-5">Unable</label>
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="question-block">
+                    <h5>8. How much arm, shoulder or hand pain do you have?</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q8" id="Q8-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q8-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q8" id="Q8-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q8-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q8" id="Q8-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q8-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q8" id="Q8-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q8-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q8" id="Q8-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q8-5">Unable</label>
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="question-block">
+                    <h5>9. How much difficulty do you have sleeping because of the pain in your arm, shoulder or hand?</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q9" id="Q9-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q9-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q9" id="Q9-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q9-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q9" id="Q9-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q9-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q9" id="Q9-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q9-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q9" id="Q9-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q9-5">Unable</label>
+                    </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="question-block">
+                    <h5>10. I feel less capable, less confident or less useful because of my arm, shoulder or hand problem</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q10" id="Q10-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q10-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q10" id="Q10-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q10-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q10" id="Q10-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q10-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q10" id="Q10-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q10-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q10" id="Q10-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q10-5">Unable</label>
+                    </div>
+                </div>
+
+                <!-- Q11 -->
+                <div class="question-block">
+                    <h5>11. Tingling (pins and needles) in your arm, shoulder or hand</h5>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="Q11" id="Q11-1" value="1" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q11-1">No difficulty</label>
+                        <input type="radio" class="btn-check" name="Q11" id="Q11-2" value="2" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q11-2">Mild difficulty</label>
+                        <input type="radio" class="btn-check" name="Q11" id="Q11-3" value="3" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q11-3">Moderate difficulty</label>
+                        <input type="radio" class="btn-check" name="Q11" id="Q11-4" value="4" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q11-4">Severe difficulty</label>
+                        <input type="radio" class="btn-check" name="Q11" id="Q11-5" value="5" autocomplete="off">
+                        <label class="btn btn-outline-primary btn-option" for="Q11-5">Unable</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="text-center my-4">
+                <button type="button" class="btn btn-success btn-lg mx-2" onclick="computeQuickDASH()">Calculate Score</button>
+                <button type="button" class="btn btn-danger btn-lg mx-2" onclick="resetForm()">Clear</button>
+            </div>
+        </form>
+
+        <!-- Results -->
+        <div class="results" id="results" style="display: none;">
+            <h4>QuickDASH Score</h4>
+            <p><strong>QuickDASH Disability/Symptom Score:</strong> <span id="dashScore">-</span> / 100</p>
+            <p class="mt-3"><small>Higher scores indicate greater disability.<br>
+            (0 = No disability, 100 = Most severe disability)</small></p>
+        </div>
+    </div>
+
+    <script>
+        function computeQuickDASH() {
+            let sum = 0;
+            let count = 0;
+
+            for (let i = 1; i <= 11; i++) {
+                const selected = document.querySelector(`input[name="Q${i}"]:checked`);
+                if (selected) {
+                    sum += parseInt(selected.value);
+                    count++;
+                }
+            }
+
+            if (count < 10) {
+                alert("At least 10 questions must be answered to calculate the score.");
+                return;
+            }
+
+            const score = Math.round(((sum / count) - 1) * 25);
+
+            document.getElementById('dashScore').textContent = score;
+            document.getElementById('results').style.display = 'block';
+        }
+
+        function resetForm() {
+            document.getElementById('quickdashForm').reset();
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('dashScore').textContent = '-';
+        }
+    </script>
+</body>
+</html>
